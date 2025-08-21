@@ -5,10 +5,10 @@ const FunctionalComponent = () => {
     const darkTheme = useTheme()
     const handleToggle = useUpdateTheme()
     const themeStyle = {
-        backgroundColor: darkTheme? "#ccc" : "#333",
-        color: darkTheme? "#333": "#ccc",
-        margin: "15px",
-        padding: "20px"
+      backgroundColor: darkTheme? "#ccc" : "#333",
+      color: darkTheme? "#333": "#ccc",
+      margin: "15px",
+      padding: "20px"
     }
   return (
     <>

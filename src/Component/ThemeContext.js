@@ -19,9 +19,9 @@ const ThemeProvider = ({children}) => {
 
   return (
     <ThemeContext.Provider value={darkTheme}>
-        <ThemeUpdateContext.Provider value={handleToggle}>
-            {children}
-        </ThemeUpdateContext.Provider>
+      <ThemeUpdateContext.Provider value={handleToggle}>
+        {children}
+      </ThemeUpdateContext.Provider>
     </ThemeContext.Provider>
   )
 }

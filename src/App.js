@@ -2,15 +2,16 @@ import './App.css';
 import Search from './Component/search';
 import FunctionalComponent from './Component/functionalComponent';
 import ThemeProvider from './Component/ThemeContext';
+import MultistepForm from './Component/multistepForm/multistepForm';
 
 function App() {
-
   
   return (
-    <ThemeProvider>
-      <FunctionalComponent />
-      <Search />
-    </ThemeProvider>
+    <MultistepForm/>
+    // <ThemeProvider>
+    //   <FunctionalComponent />
+    //   <Search />
+    // </ThemeProvider>
   );
 }
 

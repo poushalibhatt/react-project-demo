@@ -1,22 +1,28 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 
 const Count = () => {
 
     const [count, setCount] = useState(0)
-    const handleStart = () => {
-        setInterval(() => {
-            setCount(prev => prev + 1)
-        }, [1000])
+    const [isRunning, setIsRunning] = useState(false)
 
-        clearInterval()
+    useEffect(() => {
+        let timer
+
+        if(isRunning) {
+            timer = setInterval(() => {
+                setCount(prev => prev + 1)
+            }, [1000])
+        }
+
+        return () => clearInterval(timer)
+    }, [isRunning])
+
+    const handleStart = () => setIsRunning(true)
+    const handleStop = () => setIsRunning(false)
+    const handleReset = () => {
+        setIsRunning(false)
+        setCount(0)
     }
-
-    const handleStop = () => {
-        clearInterval()
-    }
-
-    const handleReset = () => {}
-
   return (
     <div>Count: {count}
         <div>
